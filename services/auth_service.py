@@ -21,15 +21,19 @@ def register():
     print("Регистрация успешна!")
 
 def login():
-    users = load_data(USERS_FILE)
+    users = load_data("data/users.txt")
 
     username = input("Логин: ")
     password = input("Пароль: ")
 
     for user in users:
-        if user["username"] == username and user["password"] == password:
-            print("Успешный вход!")
-            return user
+        if user["username"] == username:
+            if user["password"] == password:
+                print("Успешный вход!")
+                return user
+            else:
+                print("Неверный пароль")
+                return None
 
-    print("Ошибка входа")
+    print("Пользователь не найден")
     return None
