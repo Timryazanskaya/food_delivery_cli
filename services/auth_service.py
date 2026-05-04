@@ -35,7 +35,7 @@ def login():
     for user in users:
         if user["username"] == username:
             if user["password"] == password:
-                print("Успешный вход!")
+                print(f"Успешный вход! Добро пожаловать, {username}!")
                 return user
             else:
                 print("Неверный пароль")
