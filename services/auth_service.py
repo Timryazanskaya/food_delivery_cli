@@ -6,6 +6,12 @@ def register():
     users = load_data(USERS_FILE)
 
     username = input("Логин: ")
+
+    for user in users:
+        if user["username"] == username:
+            print("Пользователь уже существует")
+            return
+
     password = input("Пароль: ")
     role = input("Роль (client/restaurant/courier): ")
 
