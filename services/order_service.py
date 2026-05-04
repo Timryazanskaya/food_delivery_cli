@@ -48,7 +48,35 @@ def client_menu(user):
 
 
 # ================= RESTAURANT =================
+RESTAURANTS_FILE = "data/restaurants.txt"
 
+def get_restaurant(username):
+    restaurants = load_data(RESTAURANTS_FILE)
+
+    for r in restaurants:
+        if r["username"] == username:
+            return r
+
+    # если нет — создаём
+    new_restaurant = {
+        "username": username,
+        "menu": []
+    }
+
+    restaurants.append(new_restaurant)
+    save_data(RESTAURANTS_FILE, restaurants)
+
+    return new_restaurant
+
+
+def save_restaurant(updated_restaurant):
+    restaurants = load_data(RESTAURANTS_FILE)
+
+    for i, r in enumerate(restaurants):
+        if r["username"] == updated_restaurant["username"]:
+            restaurants[i] = updated_restaurant
+
+    save_data(RESTAURANTS_FILE, restaurants)
 def restaurant_menu(user):
     while True:
         print("\n=== РЕСТОРАН ===")
