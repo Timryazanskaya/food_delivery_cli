@@ -25,10 +25,9 @@ def client_menu(user):
         elif choice == "2":
             show_restaurant_menu()
 
+
         elif choice == "3":
-            item = input("Введите блюдо: ")
-            cart.append(item)
-            print("Добавлено!")
+            add_to_cart(cart)
 
         elif choice == "4":
             orders = load_data(ORDERS_FILE)
