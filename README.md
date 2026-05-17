@@ -82,11 +82,17 @@ Food Delivery CLI — это консольная система, моделир
 
 ## Установка и запуск
 ### 1. Клонирование репозитория
-git clone 
+`git clone https://github.com/Timryazanskaya/food_delivery_cli.git`
 ### 2. Переход в папку проекта
-cd food_delivery_cli
+`cd food_delivery_cli`
 ### Запуск приложения
-python main.py
+`python main.py`
+
+---
+
+## Требования
+- Python 3.11+
+- Git (опционально)
 
 ---
 
