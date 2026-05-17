@@ -2,6 +2,7 @@ import json
 import os
 
 def load_data(filename):
+    # Автоматическое создание файла, если он отсутствует
     if not os.path.exists(filename):
         with open(filename, "w", encoding="utf-8") as f:
             json.dump([], f)

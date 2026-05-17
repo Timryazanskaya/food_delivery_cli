@@ -6,7 +6,7 @@ def register():
     users = load_data(USERS_FILE)
 
     username = input("Логин: ")
-
+    # Проверка существования пользователя
     for user in users:
         if user["username"] == username:
             print("Пользователь уже существует")
@@ -20,7 +20,7 @@ def register():
         "password": password,
         "role": role
     }
-
+    # Добавление нового пользователя в список
     users.append(user)
     save_data(USERS_FILE, users)
 

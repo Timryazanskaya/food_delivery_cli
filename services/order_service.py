@@ -5,6 +5,7 @@ ORDERS_FILE = "data/orders.txt"
 # ================= CLIENT =================
 
 def client_menu(user):
+    # Временная корзина клиента
     cart = []
 
     while True:
@@ -23,7 +24,7 @@ def client_menu(user):
 
         elif choice == "2":
             orders = load_data(ORDERS_FILE)
-
+            # Формирование нового заказа
             order = {
                 "id": len(orders) + 1,
                 "client": user["username"],
@@ -57,7 +58,7 @@ def get_restaurant(username):
         if r["username"] == username:
             return r
 
-    # если нет — создаём
+    # Создание ресторана, если он отсутствует в системе
     new_restaurant = {
         "username": username,
         "menu": []
@@ -125,6 +126,7 @@ def courier_menu(user):
             order_id = int(input("ID заказа: "))
             for o in orders:
                 if o["id"] == order_id:
+                    # Курьер принимает заказ
                     o["status"] = "В пути"
                     o["courier"] = user["username"]
 
