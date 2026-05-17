@@ -10,19 +10,23 @@ def client_menu(user):
 
     while True:
         print("\n=== КЛИЕНТ ===")
-        print("1. Добавить в корзину")
-        print("2. Оформить заказ")
-        print("3. Мои заказы")
+        print("1. Посмотреть рестораны")
+        print("2. Добавить в корзину")
+        print("3. Оформить заказ")
+        print("4. Мои заказы")
         print("0. Назад")
 
         choice = input("Выбор: ")
 
         if choice == "1":
+            show_restaurants()
+
+        elif choice == "2":
             item = input("Введите блюдо: ")
             cart.append(item)
             print("Добавлено!")
 
-        elif choice == "2":
+        elif choice == "3":
             orders = load_data(ORDERS_FILE)
             # Формирование нового заказа
             order = {
@@ -38,7 +42,7 @@ def client_menu(user):
             cart.clear()
             print("Заказ оформлен!")
 
-        elif choice == "3":
+        elif choice == "4":
             orders = load_data(ORDERS_FILE)
             for o in orders:
                 if o["client"] == user["username"]:

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add code comments for readability and documentation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add restaurant listing for clients">
       <change beforePath="$PROJECT_DIR$/services/order_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +164,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779031229937</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="implement full restaurant menu management">
+      <option name="closed" value="true" />
+      <created>1779032278461</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1779032278461</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add restaurant listing for clients">
+      <option name="closed" value="true" />
+      <created>1779032412178</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1779032412178</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +220,8 @@
     <MESSAGE value="add restaurants data storage&#10;add restaurant data handling functions" />
     <MESSAGE value="remove duplicate imports from file service" />
     <MESSAGE value="add code comments for readability and documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add code comments for readability and documentation" />
+    <MESSAGE value="implement full restaurant menu management" />
+    <MESSAGE value="add restaurant listing for clients" />
+    <option name="LAST_COMMIT_MESSAGE" value="add restaurant listing for clients" />
   </component>
 </project>
