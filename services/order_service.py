@@ -272,6 +272,55 @@ def show_client_orders(user):
 
         print(f"Сумма заказа: {order['total_price']} руб.")
 
+def cancel_order(user):
+
+    # Загрузка заказов
+    orders = load_data(ORDERS_FILE)
+
+    # Получение заказов клиента
+    client_orders = [
+        order for order in orders
+        if order["client"] == user["username"]
+    ]
+
+    # Проверка наличия заказов
+    if not client_orders:
+        print("У вас нет заказов")
+        return
+
+    print("\n=== ВАШИ ЗАКАЗЫ ===")
+
+    for order in client_orders:
+
+        print(
+            f"ID: {order['id']} | "
+            f"Статус: {order['status']}"
+        )
+
+    order_id = int(input("Введите ID заказа: "))
+
+    for order in orders:
+
+        if (
+            order["id"] == order_id and
+            order["client"] == user["username"]
+        ):
+
+            # Проверка возможности отмены
+            if order["status"] == "Доставлен":
+                print("Нельзя отменить доставленный заказ")
+                return
+
+            # Изменение статуса
+            order["status"] = "Отменён"
+
+            save_data(ORDERS_FILE, orders)
+
+            print("Заказ успешно отменён!")
+            return
+
+    print("Заказ не найден")
+
 def restaurant_menu(user):
 
     # Получение данных ресторана
