@@ -79,29 +79,143 @@ def save_restaurant(updated_restaurant):
 
     save_data(RESTAURANTS_FILE, restaurants)
 def restaurant_menu(user):
+
+    # Получение данных ресторана
+    restaurant = get_restaurant(user["username"])
+
     while True:
         print("\n=== РЕСТОРАН ===")
-        print("1. Посмотреть заказы")
-        print("2. Изменить статус")
+        print("1. Посмотреть меню")
+        print("2. Добавить блюдо")
+        print("3. Удалить блюдо")
+        print("4. Посмотреть заказы")
+        print("5. Изменить статус заказа")
         print("0. Назад")
 
         choice = input("Выбор: ")
 
-        orders = load_data(ORDERS_FILE)
+        # ================= ПРОСМОТР МЕНЮ =================
 
         if choice == "1":
-            for o in orders:
-                print(o)
+
+            if not restaurant["menu"]:
+                print("Меню пустое")
+            else:
+                print("\n=== МЕНЮ ===")
+
+                for index, item in enumerate(restaurant["menu"], start=1):
+                    print(
+                        f"{index}. "
+                        f"{item['name']} | "
+                        f"{item['category']} | "
+                        f"{item['price']} руб."
+                    )
+
+        # ================= ДОБАВЛЕНИЕ БЛЮДА =================
 
         elif choice == "2":
+
+            name = input("Название блюда: ")
+            category = input("Категория: ")
+            price = float(input("Цена: "))
+
+            dish = {
+                "name": name,
+                "category": category,
+                "price": price
+            }
+
+            # Добавление блюда в меню
+            restaurant["menu"].append(dish)
+
+            # Сохранение изменений
+            save_restaurant(restaurant)
+
+            print("Блюдо успешно добавлено!")
+
+        # ================= УДАЛЕНИЕ БЛЮДА =================
+
+        elif choice == "3":
+
+            if not restaurant["menu"]:
+                print("Меню пустое")
+                continue
+
+            print("\n=== МЕНЮ ===")
+
+            for index, item in enumerate(restaurant["menu"], start=1):
+                print(f"{index}. {item['name']}")
+
+            dish_index = int(input("Введите номер блюда: ")) - 1
+
+            if 0 <= dish_index < len(restaurant["menu"]):
+
+                deleted_dish = restaurant["menu"].pop(dish_index)
+
+                save_restaurant(restaurant)
+
+                print(f"Блюдо '{deleted_dish['name']}' удалено!")
+
+            else:
+                print("Неверный номер блюда")
+
+        # ================= ПРОСМОТР ЗАКАЗОВ =================
+
+        elif choice == "4":
+
+            orders = load_data(ORDERS_FILE)
+
+            if not orders:
+                print("Заказов пока нет")
+            else:
+                for order in orders:
+                    print(order)
+
+        # ================= ИЗМЕНЕНИЕ СТАТУСА =================
+
+        elif choice == "5":
+
+            orders = load_data(ORDERS_FILE)
+
             order_id = int(input("ID заказа: "))
-            new_status = input("Новый статус (Принят/Готовится/Готов к выдаче): ")
 
-            for o in orders:
-                if o["id"] == order_id:
-                    o["status"] = new_status
+            print("\nДоступные статусы:")
+            print("1. Принят")
+            print("2. Готовится")
+            print("3. Готов к выдаче")
 
-            save_data(ORDERS_FILE, orders)
+            status_choice = input("Выбор: ")
+
+            statuses = {
+                "1": "Принят",
+                "2": "Готовится",
+                "3": "Готов к выдаче"
+            }
+
+            if status_choice not in statuses:
+                print("Неверный выбор")
+                continue
+
+            for order in orders:
+
+                if order["id"] == order_id:
+
+                    # Обновление статуса заказа
+                    order["status"] = statuses[status_choice]
+
+                    save_data(ORDERS_FILE, orders)
+
+                    print("Статус успешно изменён!")
+                    break
+
+            else:
+                print("Заказ не найден")
+
+        elif choice == "0":
+            break
+
+        else:
+            print("Неверный пункт меню")
 
 
 # ================= COURIER =================
