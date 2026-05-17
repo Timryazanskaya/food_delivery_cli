@@ -146,6 +146,64 @@ def show_restaurant_menu():
             f"{item['price']} руб."
         )
 
+def add_to_cart(cart):
+
+    # Загрузка ресторанов
+    restaurants = load_data(RESTAURANTS_FILE)
+
+    # Проверка наличия ресторанов
+    if not restaurants:
+        print("Ресторанов пока нет")
+        return
+
+    print("\n=== ВЫБЕРИТЕ РЕСТОРАН ===")
+
+    # Вывод ресторанов
+    for index, restaurant in enumerate(restaurants, start=1):
+        print(f"{index}. {restaurant['username']}")
+
+    # Выбор ресторана
+    restaurant_index = int(input("Номер ресторана: ")) - 1
+
+    # Проверка выбора
+    if restaurant_index < 0 or restaurant_index >= len(restaurants):
+        print("Неверный номер ресторана")
+        return
+
+    selected_restaurant = restaurants[restaurant_index]
+
+    # Проверка меню
+    if not selected_restaurant["menu"]:
+        print("У ресторана нет блюд")
+        return
+
+    print(f"\n=== МЕНЮ: {selected_restaurant['username']} ===")
+
+    # Вывод меню
+    for index, item in enumerate(selected_restaurant["menu"], start=1):
+
+        print(
+            f"{index}. "
+            f"{item['name']} | "
+            f"{item['category']} | "
+            f"{item['price']} руб."
+        )
+
+    # Выбор блюда
+    dish_index = int(input("Номер блюда: ")) - 1
+
+    # Проверка выбора блюда
+    if dish_index < 0 or dish_index >= len(selected_restaurant["menu"]):
+        print("Неверный номер блюда")
+        return
+
+    selected_dish = selected_restaurant["menu"][dish_index]
+
+    # Добавление блюда в корзину
+    cart.append(selected_dish)
+
+    print(f"Блюдо '{selected_dish['name']}' добавлено в корзину!")
+
 def restaurant_menu(user):
 
     # Получение данных ресторана
