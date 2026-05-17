@@ -99,6 +99,49 @@ def show_restaurants():
     for index, restaurant in enumerate(restaurants, start=1):
         print(f"{index}. {restaurant['username']}")
 
+def show_restaurant_menu():
+
+    # Загрузка ресторанов
+    restaurants = load_data(RESTAURANTS_FILE)
+
+    # Проверка наличия ресторанов
+    if not restaurants:
+        print("Ресторанов пока нет")
+        return
+
+    print("\n=== ВЫБЕРИТЕ РЕСТОРАН ===")
+
+    # Вывод списка ресторанов
+    for index, restaurant in enumerate(restaurants, start=1):
+        print(f"{index}. {restaurant['username']}")
+
+    # Выбор ресторана
+    restaurant_index = int(input("Номер ресторана: ")) - 1
+
+    # Проверка корректности выбора
+    if restaurant_index < 0 or restaurant_index >= len(restaurants):
+        print("Неверный номер ресторана")
+        return
+
+    selected_restaurant = restaurants[restaurant_index]
+
+    # Проверка наличия меню
+    if not selected_restaurant["menu"]:
+        print("У ресторана пока нет блюд")
+        return
+
+    print(f"\n=== МЕНЮ: {selected_restaurant['username']} ===")
+
+    # Вывод меню ресторана
+    for index, item in enumerate(selected_restaurant["menu"], start=1):
+
+        print(
+            f"{index}. "
+            f"{item['name']} | "
+            f"{item['category']} | "
+            f"{item['price']} руб."
+        )
+
 def restaurant_menu(user):
 
     # Получение данных ресторана
