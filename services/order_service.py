@@ -75,8 +75,11 @@ def get_restaurant(username):
             return r
 
     # Создание ресторана, если он отсутствует в системе
+    restaurant_name = input("Название ресторана: ")
+
     new_restaurant = {
         "username": username,
+        "restaurant_name": restaurant_name,
         "menu": []
     }
 
