@@ -203,6 +203,32 @@ def add_to_cart(cart):
 
     print(f"Блюдо '{selected_dish['name']}' добавлено в корзину!")
 
+def show_cart(cart):
+
+    # Проверка пустой корзины
+    if not cart:
+        print("Корзина пуста")
+        return
+
+    print("\n=== КОРЗИНА ===")
+
+    total_price = 0
+
+    # Вывод товаров из корзины
+    for index, item in enumerate(cart, start=1):
+
+        print(
+            f"{index}. "
+            f"{item['name']} | "
+            f"{item['category']} | "
+            f"{item['price']} руб."
+        )
+
+        total_price += item["price"]
+
+    # Итоговая стоимость
+    print(f"\nИтоговая сумма: {total_price} руб.")
+
 def restaurant_menu(user):
 
     # Получение данных ресторана
