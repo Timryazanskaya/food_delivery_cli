@@ -78,6 +78,23 @@ def save_restaurant(updated_restaurant):
             restaurants[i] = updated_restaurant
 
     save_data(RESTAURANTS_FILE, restaurants)
+
+def show_restaurants():
+
+    # Загрузка ресторанов из файла
+    restaurants = load_data(RESTAURANTS_FILE)
+
+    # Проверка наличия ресторанов
+    if not restaurants:
+        print("Ресторанов пока нет")
+        return
+
+    print("\n=== СПИСОК РЕСТОРАНОВ ===")
+
+    # Вывод списка ресторанов
+    for index, restaurant in enumerate(restaurants, start=1):
+        print(f"{index}. {restaurant['username']}")
+
 def restaurant_menu(user):
 
     # Получение данных ресторана
