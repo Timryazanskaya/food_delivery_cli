@@ -236,6 +236,42 @@ def show_cart(cart):
     # Итоговая стоимость
     print(f"\nИтоговая сумма: {total_price} руб.")
 
+def show_client_orders(user):
+
+    # Загрузка заказов
+    orders = load_data(ORDERS_FILE)
+
+    # Поиск заказов клиента
+    client_orders = [
+        order for order in orders
+        if order["client"] == user["username"]
+    ]
+
+    # Проверка наличия заказов
+    if not client_orders:
+        print("У вас пока нет заказов")
+        return
+
+    print("\n=== МОИ ЗАКАЗЫ ===")
+
+    # Вывод заказов
+    for order in client_orders:
+
+        print(f"\nID заказа: {order['id']}")
+        print(f"Статус: {order['status']}")
+
+        print("Блюда:")
+
+        for item in order["items"]:
+
+            print(
+                f"- {item['name']} "
+                f"({item['category']}) "
+                f"- {item['price']} руб."
+            )
+
+        print(f"Сумма заказа: {order['total_price']} руб.")
+
 def restaurant_menu(user):
 
     # Получение данных ресторана
