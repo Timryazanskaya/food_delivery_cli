@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add cart viewing option to client men" />
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add client order cancellation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,7 +234,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779033585985</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add total price calculation for orders">
+      <option name="closed" value="true" />
+      <created>1779033929366</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1779033929366</updated>
+    </task>
+    <task id="LOCAL-00023" summary="implement formatted client order displa">
+      <option name="closed" value="true" />
+      <created>1779034021161</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1779034021161</updated>
+    </task>
+    <task id="LOCAL-00024" summary="add client order cancellation">
+      <option name="closed" value="true" />
+      <created>1779034143703</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1779034143703</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,6 +307,10 @@
     <MESSAGE value="replace manual cart input with menu-based dish selection" />
     <MESSAGE value="add cart viewing with total price calculation" />
     <MESSAGE value="add cart viewing option to client men" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cart viewing option to client men" />
+    <MESSAGE value="add total price calculation for orders" />
+    <MESSAGE value="implement formatted client order display" />
+    <MESSAGE value="implement formatted client order display" />
+    <MESSAGE value="add client order cancellation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add client order cancellation" />
   </component>
 </project>

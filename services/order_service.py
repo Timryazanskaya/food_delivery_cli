@@ -16,6 +16,7 @@ def client_menu(user):
         print("4. Посмотреть корзину")
         print("5. Оформить заказ")
         print("6. Мои заказы")
+        print("7. Отменить заказ")
         print("0. Назад")
 
         choice = input("Выбор: ")
@@ -52,11 +53,12 @@ def client_menu(user):
             cart.clear()
             print("Заказ оформлен!")
 
+
         elif choice == "6":
-            orders = load_data(ORDERS_FILE)
-            for o in orders:
-                if o["client"] == user["username"]:
-                    print(o)
+            show_client_orders(user)
+
+        elif choice == "7":
+            cancel_order(user)
 
         elif choice == "0":
             break
