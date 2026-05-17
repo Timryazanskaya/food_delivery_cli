@@ -35,11 +35,14 @@ def client_menu(user):
 
         elif choice == "5":
             orders = load_data(ORDERS_FILE)
+            # Подсчёт суммы заказа
+            total_price = sum(item["price"] for item in cart)
             # Формирование нового заказа
             order = {
                 "id": len(orders) + 1,
                 "client": user["username"],
                 "items": cart,
+                "total_price": total_price,
                 "status": "Создан"
             }
 
