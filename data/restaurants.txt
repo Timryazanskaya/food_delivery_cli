@@ -1,1 +1,93 @@
-[]
+[
+    {
+        "username": "pizza_house",
+        "restaurant_name": "Пицца Хаус",
+        "menu": [
+            {
+                "name": "Маргарита",
+                "category": "Пицца",
+                "price": 500.0
+            },
+            {
+                "name": "Пепперони",
+                "category": "Пицца",
+                "price": 650.0
+            },
+            {
+                "name": "4 Сыра",
+                "category": "Пицца",
+                "price": 700.0
+            },
+            {
+                "name": "Гавайская",
+                "category": "Пицца",
+                "price": 680.0
+            },
+            {
+                "name": "Мясная",
+                "category": "Пицца",
+                "price": 750.0
+            },
+            {
+                "name": "BBQ Chicken",
+                "category": "Пицца",
+                "price": 720.0
+            },
+            {
+                "name": "Вегетарианская",
+                "category": "Пицца",
+                "price": 620.0
+            },
+            {
+                "name": "Карбонара",
+                "category": "Пицца",
+                "price": 690.0
+            },
+            {
+                "name": "Диабло",
+                "category": "Пицца",
+                "price": 730.0
+            },
+            {
+                "name": "Морская",
+                "category": "Пицца",
+                "price": 850.0
+            },
+            {
+                "name": "Картофель фри",
+                "category": "Закуски",
+                "price": 250.0
+            },
+            {
+                "name": "Сырные палочки",
+                "category": "Закуски",
+                "price": 320.0
+            },
+            {
+                "name": "Куриные крылышки",
+                "category": "Закуски",
+                "price": 410.0
+            },
+            {
+                "name": "Наггетсы",
+                "category": "Закуски",
+                "price": 350.0
+            },
+            {
+                "name": "Coca-Cola",
+                "category": "Напитки",
+                "price": 150.0
+            },
+            {
+                "name": "Sprite",
+                "category": "Напитки",
+                "price": 150.0
+            },
+            {
+                "name": "Апельсиновый сок",
+                "category": "Напитки",
+                "price": 110.0
+            }
+        ]
+    }
+]
