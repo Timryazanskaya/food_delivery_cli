@@ -174,7 +174,7 @@ def add_to_cart(cart):
 
     # Вывод ресторанов
     for index, restaurant in enumerate(restaurants, start=1):
-        print(f"{index}. {restaurant['username']}")
+        print(f"{index}. {restaurant['restaurant_name']}")
 
     # Выбор ресторана
     restaurant_index = int(input("Номер ресторана: ")) - 1
@@ -191,7 +191,7 @@ def add_to_cart(cart):
         print("У ресторана нет блюд")
         return
 
-    print(f"\n=== МЕНЮ: {selected_restaurant['username']} ===")
+    print(f"\n=== МЕНЮ: {selected_restaurant['restaurant_name']} ===")
 
     # Вывод меню
     for index, item in enumerate(selected_restaurant["menu"], start=1):
