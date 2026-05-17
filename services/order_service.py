@@ -112,7 +112,7 @@ def show_restaurants():
 
     # Вывод списка ресторанов
     for index, restaurant in enumerate(restaurants, start=1):
-        print(f"{index}. {restaurant['username']}")
+        print(f"{index}. {restaurant['restaurant_name']}")
 
 def show_restaurant_menu():
 
