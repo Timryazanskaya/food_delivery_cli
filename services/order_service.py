@@ -705,15 +705,40 @@ def courier_menu(user):
         if choice == "1":
             show_available_orders()
 
-        elif choice == "2":
-            order_id = int(input("ID заказа: "))
-            for o in orders:
-                if o["id"] == order_id:
-                    # Курьер принимает заказ
-                    o["status"] = "В пути"
-                    o["courier"] = user["username"]
 
-            save_data(ORDERS_FILE, orders)
+        elif choice == "2":
+
+            order_id = int(input("ID заказа: "))
+
+            for order in orders:
+
+                # Проверка ID
+
+                if order["id"] == order_id:
+
+                    # Проверка статуса
+
+                    if order["status"] != "Готов к выдаче":
+                        print("Заказ ещё не готов к выдаче")
+
+                        break
+
+                    # Назначение курьера
+
+                    order["status"] = "В пути"
+
+                    order["courier"] = user["username"]
+
+                    save_data(ORDERS_FILE, orders)
+
+                    print("Заказ успешно взят!")
+
+                    break
+
+
+            else:
+
+                print("Заказ не найден")
 
         elif choice == "3":
             order_id = int(input("ID заказа: "))
