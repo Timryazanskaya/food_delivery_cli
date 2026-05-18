@@ -143,6 +143,10 @@ def rate_restaurant():
                     restaurant["restaurant_name"] ==
                     order["restaurant"]
                 ):
+                    # Создание списка оценок
+                    if "ratings" not in restaurant:
+                        restaurant["ratings"] = []
+
                     restaurant["ratings"].append(rating)
                     save_data(
                         RESTAURANTS_FILE,
