@@ -155,11 +155,11 @@ def show_restaurant_menu():
 
     # Вывод меню ресторана
     for index, item in enumerate(selected_restaurant["menu"], start=1):
-
         print(
             f"{index}. "
             f"{item['name']} | "
             f"{item['category']} | "
+            f"{item['description']} | "
             f"{item['price']} руб."
         )
 
