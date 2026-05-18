@@ -9,14 +9,14 @@ def client_menu(user):
     cart = []
 
     while True:
-        print("\n=== КЛИЕНТ ===")
         print("1. Посмотреть рестораны")
         print("2. Посмотреть меню ресторана")
-        print("3. Добавить в корзину")
-        print("4. Посмотреть корзину")
-        print("5. Оформить заказ")
-        print("6. Мои заказы")
-        print("7. Отменить заказ")
+        print("3. Фильтр блюд")
+        print("4. Добавить в корзину")
+        print("5. Посмотреть корзину")
+        print("6. Оформить заказ")
+        print("7. Мои заказы")
+        print("8. Отменить заказ")
         print("0. Назад")
 
         choice = input("Выбор: ")
@@ -27,14 +27,16 @@ def client_menu(user):
         elif choice == "2":
             show_restaurant_menu()
 
-
         elif choice == "3":
-            add_to_cart(cart)
+            filter_restaurant_menu()
 
         elif choice == "4":
-            show_cart(cart)
+            add_to_cart(cart)
 
         elif choice == "5":
+            show_cart(cart)
+
+        elif choice == "6":
             orders = load_data(ORDERS_FILE)
             # Подсчёт суммы заказа
             total_price = sum(item["price"] for item in cart)
@@ -54,10 +56,10 @@ def client_menu(user):
             print("Заказ оформлен!")
 
 
-        elif choice == "6":
+        elif choice == "7":
             show_client_orders(user)
 
-        elif choice == "7":
+        elif choice == "8":
             cancel_order(user)
 
         elif choice == "0":
