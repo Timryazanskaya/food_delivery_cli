@@ -201,7 +201,23 @@ def show_restaurants():
 
     # Вывод списка ресторанов
     for index, restaurant in enumerate(restaurants, start=1):
-        print(f"{index}. {restaurant['restaurant_name']}")
+        # Получение рейтинга
+        ratings = restaurant.get("ratings", [])
+        # Проверка наличия оценок
+        if ratings:
+            average_rating = (
+                    sum(ratings) / len(ratings)
+            )
+            rating_text = (
+                f"⭐ {average_rating:.1f}"
+            )
+        else:
+            rating_text = "Нет оценок"
+        print(
+            f"{index}. "
+            f"{restaurant['restaurant_name']} | "
+            f"{rating_text}"
+        )
 
 def show_restaurant_menu():
 

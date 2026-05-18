@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add single item removal from cart">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service.py" afterDir="false" />
-    </list>
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add restaurant rating option to client menu" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,38 +65,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777907488154</updated>
-    </task>
-    <task id="LOCAL-00006" summary="improve login success message">
-      <option name="closed" value="true" />
-      <created>1777916444173</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1777916444173</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add restaurants data storage">
-      <option name="closed" value="true" />
-      <created>1777916723741</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1777916723741</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add restaurants data storage">
-      <option name="closed" value="true" />
-      <created>1777916853625</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1777916853625</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add restaurants data storage&#10;add restaurant data handling functions">
-      <option name="closed" value="true" />
-      <created>1777916886511</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1777916886511</updated>
     </task>
     <task id="LOCAL-00010" summary="remove duplicate imports from file service">
       <option name="closed" value="true" />
@@ -461,7 +426,39 @@
       <option name="project" value="LOCAL" />
       <updated>1779126228960</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="implement dish search by name">
+      <option name="closed" value="true" />
+      <created>1779127194487</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1779127194488</updated>
+    </task>
+    <task id="LOCAL-00056" summary="add restaurant ratings storage">
+      <option name="closed" value="true" />
+      <created>1779127242139</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1779127242139</updated>
+    </task>
+    <task id="LOCAL-00057" summary="implement restaurant rating syste">
+      <option name="closed" value="true" />
+      <created>1779127352939</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1779127352939</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add restaurant rating option to client menu">
+      <option name="closed" value="true" />
+      <created>1779127433160</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1779127433160</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -491,11 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add restaurant info" />
-    <MESSAGE value="implement restaurant menu filtering by category" />
-    <MESSAGE value="add dish filtering option to client interface" />
-    <MESSAGE value="attach restaurant information to cart items" />
-    <MESSAGE value="store restaurant information in orders" />
     <MESSAGE value="add restaurant statistics calculation" />
     <MESSAGE value="add statistics option to restaurant interface" />
     <MESSAGE value="implement courier statistics system" />
@@ -516,6 +508,11 @@
     <MESSAGE value="prevent creating orders with empty cart" />
     <MESSAGE value="add cart clearing functionality" />
     <MESSAGE value="add single item removal from cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="add single item removal from cart" />
+    <MESSAGE value="implement dish search by name" />
+    <MESSAGE value="add restaurant ratings storage" />
+    <MESSAGE value="implement restaurant rating system" />
+    <MESSAGE value="implement restaurant rating system" />
+    <MESSAGE value="add restaurant rating option to client menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="add restaurant rating option to client menu" />
   </component>
 </project>
