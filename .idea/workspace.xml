@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="implement formatted restaurant order display">
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="validate courier ownership before completing delivery">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/restaurants.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/restaurants.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,7 +421,47 @@
       <option name="project" value="LOCAL" />
       <updated>1779098347622</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="improve restaurant order interface">
+      <option name="closed" value="true" />
+      <created>1779099036635</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1779099036635</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add formatted courier available orders display">
+      <option name="closed" value="true" />
+      <created>1779099117685</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1779099117685</updated>
+    </task>
+    <task id="LOCAL-00047" summary="improve courier available orders interface">
+      <option name="closed" value="true" />
+      <created>1779099174129</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1779099174129</updated>
+    </task>
+    <task id="LOCAL-00048" summary="restrict courier to ready-for-delivery orders only">
+      <option name="closed" value="true" />
+      <created>1779099222175</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1779099222175</updated>
+    </task>
+    <task id="LOCAL-00049" summary="validate courier ownership before completing delivery">
+      <option name="closed" value="true" />
+      <created>1779099296749</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1779099296749</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -450,11 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add cart viewing option to client men" />
-    <MESSAGE value="add total price calculation for orders" />
-    <MESSAGE value="implement formatted client order display" />
-    <MESSAGE value="implement formatted client order display" />
-    <MESSAGE value="add client order cancellation" />
     <MESSAGE value="add formatted order management to client menu" />
     <MESSAGE value="add separate display name for restaurants" />
     <MESSAGE value="display restaurant names instead of usernames" />
@@ -475,6 +511,11 @@
     <MESSAGE value="improve cart menu display with dish descriptions" />
     <MESSAGE value="implement restaurant dish editing system" />
     <MESSAGE value="implement formatted restaurant order display" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement formatted restaurant order display" />
+    <MESSAGE value="improve restaurant order interface" />
+    <MESSAGE value="add formatted courier available orders display" />
+    <MESSAGE value="improve courier available orders interface" />
+    <MESSAGE value="restrict courier to ready-for-delivery orders only" />
+    <MESSAGE value="validate courier ownership before completing delivery" />
+    <option name="LAST_COMMIT_MESSAGE" value="validate courier ownership before completing delivery" />
   </component>
 </project>

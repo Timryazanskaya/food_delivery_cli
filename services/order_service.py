@@ -236,7 +236,7 @@ def filter_restaurant_menu():
             f"{item['name']} | "
             f"{item['price']} руб."
         )
-
+    print()
 def add_to_cart(cart):
 
     # Загрузка ресторанов
