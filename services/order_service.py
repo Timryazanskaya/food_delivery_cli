@@ -440,6 +440,7 @@ def restaurant_menu(user):
                         f"{index}. "
                         f"{item['name']} | "
                         f"{item['category']} | "
+                        f"{item['description']} | "
                         f"{item['price']} руб."
                     )
 
