@@ -703,9 +703,7 @@ def courier_menu(user):
         orders = load_data(ORDERS_FILE)
 
         if choice == "1":
-            for o in orders:
-                if o["status"] == "Готов к выдаче":
-                    print(o)
+            show_available_orders()
 
         elif choice == "2":
             order_id = int(input("ID заказа: "))
