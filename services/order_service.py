@@ -613,39 +613,56 @@ def restaurant_menu(user):
 
         # ================= ИЗМЕНЕНИЕ СТАТУСА =================
 
+        # ================= ИЗМЕНЕНИЕ СТАТУСА =================
+
         elif choice == "6":
 
-            orders = load_data(ORDERS_FILE)
-
             order_id = int(input("ID заказа: "))
-
             print("\nДоступные статусы:")
             print("1. Принят")
             print("2. Готовится")
             print("3. Готов к выдаче")
-
             status_choice = input("Выбор: ")
-
             statuses = {
                 "1": "Принят",
                 "2": "Готовится",
                 "3": "Готов к выдаче"
             }
-
+            # Проверка выбора статуса
             if status_choice not in statuses:
-                print("Неверный выбор")
+                print("Неверный статус")
                 continue
+            new_status = statuses[status_choice]
+            # Название текущего ресторана
+            restaurant_name = (
+                get_restaurant(user["username"])
+                ["restaurant_name"]
+            )
 
             for order in orders:
-
+                # Проверка ID
                 if order["id"] == order_id:
+                    # Проверка принадлежности заказа ресторану
+                    if (
+                            order.get("restaurant") !=
+                            restaurant_name
+                    ):
+                        print(
+                            "Вы не можете изменять чужие заказы"
+                        )
+                        break
 
-                    # Обновление статуса заказа
-                    order["status"] = statuses[status_choice]
+                    # Проверка отменённого заказа
+                    if order["status"] == "Отменён":
+                        print(
+                            "Нельзя изменить отменённый заказ"
+                        )
+                        break
 
+                    # Изменение статуса
+                    order["status"] = new_status
                     save_data(ORDERS_FILE, orders)
-
-                    print("Статус успешно изменён!")
+                    print("Статус заказа обновлён!")
                     break
 
             else:
