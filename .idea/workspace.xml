@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add courier statistics interface">
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="improve cart menu display with dish descriptions">
       <change beforePath="$PROJECT_DIR$/services/order_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -372,7 +372,39 @@
       <option name="project" value="LOCAL" />
       <updated>1779096660730</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="add dish descriptions to restaurant menu">
+      <option name="closed" value="true" />
+      <created>1779096975321</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1779096975321</updated>
+    </task>
+    <task id="LOCAL-00040" summary="improve restaurant menu display with descriptions">
+      <option name="closed" value="true" />
+      <created>1779097014479</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1779097014479</updated>
+    </task>
+    <task id="LOCAL-00041" summary="show dish descriptions in client menu">
+      <option name="closed" value="true" />
+      <created>1779097065829</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1779097065829</updated>
+    </task>
+    <task id="LOCAL-00042" summary="improve cart menu display with dish descriptions">
+      <option name="closed" value="true" />
+      <created>1779097109101</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1779097109101</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -402,10 +434,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add restaurant viewing option to client menu" />
-    <MESSAGE value="implement restaurant menu viewing for clients" />
-    <MESSAGE value="add restaurant menu viewing option to client menu" />
-    <MESSAGE value="implement adding dishes to cart from restaurant menu" />
     <MESSAGE value="replace manual cart input with menu-based dish selection" />
     <MESSAGE value="add cart viewing with total price calculation" />
     <MESSAGE value="add cart viewing option to client men" />
@@ -427,6 +455,10 @@
     <MESSAGE value="add statistics option to restaurant interface" />
     <MESSAGE value="implement courier statistics system" />
     <MESSAGE value="add courier statistics interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="add courier statistics interface" />
+    <MESSAGE value="add dish descriptions to restaurant menu" />
+    <MESSAGE value="improve restaurant menu display with descriptions" />
+    <MESSAGE value="show dish descriptions in client menu" />
+    <MESSAGE value="improve cart menu display with dish descriptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve cart menu display with dish descriptions" />
   </component>
 </project>

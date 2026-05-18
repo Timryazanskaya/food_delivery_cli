@@ -418,10 +418,11 @@ def restaurant_menu(user):
         print("\n=== РЕСТОРАН ===")
         print("1. Посмотреть меню")
         print("2. Добавить блюдо")
-        print("3. Удалить блюдо")
-        print("4. Посмотреть заказы")
-        print("5. Изменить статус заказа")
-        print("6. Статистика")
+        print("3. Изменить блюдо")
+        print("4. Удалить блюдо")
+        print("5. Посмотреть заказы")
+        print("6. Изменить статус заказа")
+        print("7. Статистика")
         print("0. Назад")
 
         choice = input("Выбор: ")
@@ -468,9 +469,42 @@ def restaurant_menu(user):
 
             print("Блюдо успешно добавлено!")
 
-        # ================= УДАЛЕНИЕ БЛЮДА =================
+        # ================= ИЗМЕНЕНИЕ БЛЮДА =================
 
         elif choice == "3":
+
+            if not restaurant["menu"]:
+                print("Меню пустое")
+                continue
+
+            print("\n=== МЕНЮ ===")
+
+            for index, item in enumerate(restaurant["menu"], start=1):
+                print(f"{index}. {item['name']}")
+
+            dish_index = int(input("Номер блюда: ")) - 1
+
+            if 0 <= dish_index < len(restaurant["menu"]):
+
+                dish = restaurant["menu"][dish_index]
+
+                print("\nВведите новые данные")
+
+                dish["name"] = input("Название: ")
+                dish["category"] = input("Категория: ")
+                dish["description"] = input("Описание: ")
+                dish["price"] = float(input("Цена: "))
+
+                save_restaurant(restaurant)
+
+                print("Блюдо успешно обновлено!")
+
+            else:
+                print("Неверный номер блюда")
+
+        # ================= УДАЛЕНИЕ БЛЮДА =================
+
+        elif choice == "4":
 
             if not restaurant["menu"]:
                 print("Меню пустое")
@@ -496,7 +530,7 @@ def restaurant_menu(user):
 
         # ================= ПРОСМОТР ЗАКАЗОВ =================
 
-        elif choice == "4":
+        elif choice == "5":
 
             orders = load_data(ORDERS_FILE)
 
@@ -508,7 +542,7 @@ def restaurant_menu(user):
 
         # ================= ИЗМЕНЕНИЕ СТАТУСА =================
 
-        elif choice == "5":
+        elif choice == "6":
 
             orders = load_data(ORDERS_FILE)
 
@@ -546,7 +580,7 @@ def restaurant_menu(user):
             else:
                 print("Заказ не найден")
 
-        elif choice == "6":
+        elif choice == "7":
             show_restaurant_statistics(user)
 
         elif choice == "0":
