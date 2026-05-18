@@ -272,11 +272,11 @@ def add_to_cart(cart):
 
     # Вывод меню
     for index, item in enumerate(selected_restaurant["menu"], start=1):
-
         print(
             f"{index}. "
             f"{item['name']} | "
             f"{item['category']} | "
+            f"{item['description']} | "
             f"{item['price']} руб."
         )
 
