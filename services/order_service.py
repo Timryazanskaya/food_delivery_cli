@@ -122,7 +122,8 @@ def get_restaurant(username):
     new_restaurant = {
         "username": username,
         "restaurant_name": restaurant_name,
-        "menu": []
+        "menu": [],
+        "ratings": []
     }
 
     restaurants.append(new_restaurant)
