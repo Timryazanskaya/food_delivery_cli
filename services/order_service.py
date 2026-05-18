@@ -548,6 +548,33 @@ def restaurant_menu(user):
         else:
             print("Неверный пункт меню")
 
+def show_restaurant_statistics(user):
+
+    # Загрузка заказов
+    orders = load_data(ORDERS_FILE)
+
+    total_orders = 0
+    total_revenue = 0
+
+    # Подсчёт статистики
+    for order in orders:
+
+        if (
+            order.get("restaurant") ==
+            get_restaurant(user["username"])["restaurant_name"]
+        ):
+
+            total_orders += 1
+
+            # Учитываем только неотменённые заказы
+            if order["status"] != "Отменён":
+
+                total_revenue += order["total_price"]
+
+    print("\n=== СТАТИСТИКА РЕСТОРАНА ===")
+
+    print(f"Количество заказов: {total_orders}")
+    print(f"Общая выручка: {total_revenue} руб.")
 
 # ================= COURIER =================
 
