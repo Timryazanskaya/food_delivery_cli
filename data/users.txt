@@ -1,0 +1,27 @@
+[
+    {
+        "username": "client1",
+        "password": "1001",
+        "role": "client"
+    },
+    {
+        "username": "courier1",
+        "password": "111",
+        "role": "courier"
+    },
+    {
+        "username": "pizza_house",
+        "password": "pizzahouse",
+        "role": "restaurant"
+    },
+    {
+        "username": "taste_architect",
+        "password": "tastearchitect",
+        "role": "restaurant"
+    },
+    {
+        "username": "zero_friction",
+        "password": "zerofriction",
+        "role": "restaurant"
+    }
+]
