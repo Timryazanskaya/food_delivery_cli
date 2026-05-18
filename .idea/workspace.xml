@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add client order cancellation" />
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add restaurant info">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +260,55 @@
       <option name="project" value="LOCAL" />
       <updated>1779034143703</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add formatted order management to client menu">
+      <option name="closed" value="true" />
+      <created>1779034234967</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1779034234967</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add separate display name for restaurants">
+      <option name="closed" value="true" />
+      <created>1779034985856</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1779034985856</updated>
+    </task>
+    <task id="LOCAL-00027" summary="display restaurant names instead of usernames">
+      <option name="closed" value="true" />
+      <created>1779035039495</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1779035039495</updated>
+    </task>
+    <task id="LOCAL-00028" summary="improve restaurant menu display name">
+      <option name="closed" value="true" />
+      <created>1779035105734</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1779035105734</updated>
+    </task>
+    <task id="LOCAL-00029" summary="use restaurant display names in cart workflow">
+      <option name="closed" value="true" />
+      <created>1779035230352</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1779035230353</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add restaurant info">
+      <option name="closed" value="true" />
+      <created>1779040308816</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1779040308816</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,10 +338,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implement user registration and login&#10;implement order management (client/restaurant/courier)&#10;add CLI interface and navigation" />
-    <MESSAGE value="add data storage files" />
-    <MESSAGE value="improve login validation with detailed error messages" />
-    <MESSAGE value="prevent duplicate usernames during registration" />
     <MESSAGE value="add auto-creation of data files if not exist" />
     <MESSAGE value="improve login success message" />
     <MESSAGE value="add restaurants data storage" />
@@ -311,6 +357,12 @@
     <MESSAGE value="implement formatted client order display" />
     <MESSAGE value="implement formatted client order display" />
     <MESSAGE value="add client order cancellation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add client order cancellation" />
+    <MESSAGE value="add formatted order management to client menu" />
+    <MESSAGE value="add separate display name for restaurants" />
+    <MESSAGE value="display restaurant names instead of usernames" />
+    <MESSAGE value="improve restaurant menu display name" />
+    <MESSAGE value="use restaurant display names in cart workflow" />
+    <MESSAGE value="add restaurant info" />
+    <option name="LAST_COMMIT_MESSAGE" value="add restaurant info" />
   </component>
 </project>

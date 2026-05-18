@@ -160,6 +160,80 @@ def show_restaurant_menu():
             f"{item['price']} руб."
         )
 
+def filter_restaurant_menu():
+
+    # Загрузка ресторанов
+    restaurants = load_data(RESTAURANTS_FILE)
+
+    # Проверка наличия ресторанов
+    if not restaurants:
+        print("Ресторанов пока нет")
+        return
+
+    print("\n=== ВЫБЕРИТЕ РЕСТОРАН ===")
+
+    # Вывод ресторанов
+    for index, restaurant in enumerate(restaurants, start=1):
+
+        print(f"{index}. {restaurant['restaurant_name']}")
+
+    # Выбор ресторана
+    restaurant_index = int(input("Номер ресторана: ")) - 1
+
+    # Проверка выбора
+    if restaurant_index < 0 or restaurant_index >= len(restaurants):
+        print("Неверный номер ресторана")
+        return
+
+    selected_restaurant = restaurants[restaurant_index]
+
+    # Проверка меню
+    if not selected_restaurant["menu"]:
+        print("Меню ресторана пустое")
+        return
+
+    print("\n=== ДОСТУПНЫЕ КАТЕГОРИИ ===")
+
+    # Получение категорий
+    categories = []
+
+    for item in selected_restaurant["menu"]:
+
+        if item["category"] not in categories:
+            categories.append(item["category"])
+
+    # Вывод категорий
+    for index, category in enumerate(categories, start=1):
+
+        print(f"{index}. {category}")
+
+    # Выбор категории
+    category_index = int(input("Номер категории: ")) - 1
+
+    # Проверка выбора категории
+    if category_index < 0 or category_index >= len(categories):
+        print("Неверный номер категории")
+        return
+
+    selected_category = categories[category_index]
+
+    print(f"\n=== КАТЕГОРИЯ: {selected_category} ===")
+
+    # Фильтрация блюд
+    filtered_items = [
+        item for item in selected_restaurant["menu"]
+        if item["category"] == selected_category
+    ]
+
+    # Вывод отфильтрованных блюд
+    for index, item in enumerate(filtered_items, start=1):
+
+        print(
+            f"{index}. "
+            f"{item['name']} | "
+            f"{item['price']} руб."
+        )
+
 def add_to_cart(cart):
 
     # Загрузка ресторанов
