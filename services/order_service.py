@@ -44,6 +44,7 @@ def client_menu(user):
             order = {
                 "id": len(orders) + 1,
                 "client": user["username"],
+                "restaurant": cart[0]["restaurant"],
                 "items": cart,
                 "total_price": total_price,
                 "status": "Создан"
