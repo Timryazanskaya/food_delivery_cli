@@ -573,8 +573,7 @@ def restaurant_menu(user):
             if not orders:
                 print("Заказов пока нет")
             else:
-                for order in orders:
-                    print(order)
+                show_restaurant_orders()
 
         # ================= ИЗМЕНЕНИЕ СТАТУСА =================
 
