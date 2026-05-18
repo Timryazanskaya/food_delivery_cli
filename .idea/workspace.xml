@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="restrict restaurants to managing only their own orders">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/order_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service.py" afterDir="false" />
-    </list>
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="prevent creating orders with empty cart" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,14 +65,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777907488154</updated>
-    </task>
-    <task id="LOCAL-00003" summary="improve login validation with detailed error messages">
-      <option name="closed" value="true" />
-      <created>1777915233307</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1777915233307</updated>
     </task>
     <task id="LOCAL-00004" summary="prevent duplicate usernames during registration">
       <option name="closed" value="true" />
@@ -461,7 +450,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779125119539</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="prevent creating orders with empty cart">
+      <option name="closed" value="true" />
+      <created>1779125943196</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1779125943196</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -491,7 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="display restaurant names instead of usernames" />
     <MESSAGE value="improve restaurant menu display name" />
     <MESSAGE value="use restaurant display names in cart workflow" />
     <MESSAGE value="add restaurant info" />
@@ -516,6 +512,7 @@
     <MESSAGE value="validate courier ownership before completing delivery" />
     <MESSAGE value="improve console spacing in filtered menu output. added a description of the restaurant's dishes" />
     <MESSAGE value="restrict restaurants to managing only their own orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="restrict restaurants to managing only their own orders" />
+    <MESSAGE value="prevent creating orders with empty cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="prevent creating orders with empty cart" />
   </component>
 </project>

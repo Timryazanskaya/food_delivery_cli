@@ -14,9 +14,11 @@ def client_menu(user):
         print("3. Фильтр блюд")
         print("4. Добавить в корзину")
         print("5. Посмотреть корзину")
-        print("6. Оформить заказ")
-        print("7. Мои заказы")
-        print("8. Отменить заказ")
+        print("6. Очистить корзину")
+        print("7. Удалить блюдо из корзины")
+        print("8. Оформить заказ")
+        print("9. Мои заказы")
+        print("10. Отменить заказ")
         print("0. Назад")
 
         choice = input("Выбор: ")
@@ -35,6 +37,10 @@ def client_menu(user):
 
         elif choice == "5":
             show_cart(cart)
+
+        elif choice == "6":
+            cart.clear()
+            print("Корзина очищена!")
 
         elif choice == "6":
             # Проверка пустой корзины
