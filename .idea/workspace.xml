@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add restaurant info">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add dish filtering option to client interface" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,20 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.__init__.executor": "Run",
-    "Python.auth_service.executor": "Run",
-    "Python.file_service.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.order_service.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
+    &quot;Python.auth_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.order_service.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -308,7 +306,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779040308816</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="implement restaurant menu filtering by category">
+      <option name="closed" value="true" />
+      <created>1779096027430</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1779096027430</updated>
+    </task>
+    <task id="LOCAL-00032" summary="add dish filtering option to client interface">
+      <option name="closed" value="true" />
+      <created>1779096126935</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1779096126935</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,8 +352,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add auto-creation of data files if not exist" />
-    <MESSAGE value="improve login success message" />
     <MESSAGE value="add restaurants data storage" />
     <MESSAGE value="add restaurants data storage&#10;add restaurant data handling functions" />
     <MESSAGE value="remove duplicate imports from file service" />
@@ -363,6 +375,8 @@
     <MESSAGE value="improve restaurant menu display name" />
     <MESSAGE value="use restaurant display names in cart workflow" />
     <MESSAGE value="add restaurant info" />
-    <option name="LAST_COMMIT_MESSAGE" value="add restaurant info" />
+    <MESSAGE value="implement restaurant menu filtering by category" />
+    <MESSAGE value="add dish filtering option to client interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dish filtering option to client interface" />
   </component>
 </project>

@@ -288,7 +288,10 @@ def add_to_cart(cart):
         return
 
     selected_dish = selected_restaurant["menu"][dish_index]
-
+    # Добавление информации о ресторане
+    selected_dish["restaurant"] = (
+        selected_restaurant["restaurant_name"]
+    )
     # Добавление блюда в корзину
     cart.append(selected_dish)
 
