@@ -421,6 +421,7 @@ def restaurant_menu(user):
         print("3. Удалить блюдо")
         print("4. Посмотреть заказы")
         print("5. Изменить статус заказа")
+        print("6. Статистика")
         print("0. Назад")
 
         choice = input("Выбор: ")
@@ -541,6 +542,9 @@ def restaurant_menu(user):
 
             else:
                 print("Заказ не найден")
+
+        elif choice == "6":
+            show_restaurant_statistics(user)
 
         elif choice == "0":
             break
