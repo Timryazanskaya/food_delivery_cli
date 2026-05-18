@@ -449,11 +449,13 @@ def restaurant_menu(user):
 
             name = input("Название блюда: ")
             category = input("Категория: ")
+            description = input("Описание блюда: ")
             price = float(input("Цена: "))
 
             dish = {
                 "name": name,
                 "category": category,
+                "description": description,
                 "price": price
             }
 

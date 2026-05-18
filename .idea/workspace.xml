@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add statistics option to restaurant interface">
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add courier statistics interface">
       <change beforePath="$PROJECT_DIR$/services/order_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -356,7 +356,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779096491490</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="implement courier statistics system">
+      <option name="closed" value="true" />
+      <created>1779096571875</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1779096571875</updated>
+    </task>
+    <task id="LOCAL-00038" summary="add courier statistics interface">
+      <option name="closed" value="true" />
+      <created>1779096660730</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1779096660730</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,8 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implement full restaurant menu management" />
-    <MESSAGE value="add restaurant listing for clients" />
     <MESSAGE value="add restaurant viewing option to client menu" />
     <MESSAGE value="implement restaurant menu viewing for clients" />
     <MESSAGE value="add restaurant menu viewing option to client menu" />
@@ -411,6 +425,8 @@
     <MESSAGE value="store restaurant information in orders" />
     <MESSAGE value="add restaurant statistics calculation" />
     <MESSAGE value="add statistics option to restaurant interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="add statistics option to restaurant interface" />
+    <MESSAGE value="implement courier statistics system" />
+    <MESSAGE value="add courier statistics interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="add courier statistics interface" />
   </component>
 </project>
