@@ -37,6 +37,10 @@ def client_menu(user):
             show_cart(cart)
 
         elif choice == "6":
+            # Проверка пустой корзины
+            if not cart:
+                print("Корзина пуста")
+                continue
             orders = load_data(ORDERS_FILE)
             # Подсчёт суммы заказа
             total_price = sum(item["price"] for item in cart)
@@ -590,11 +594,8 @@ def restaurant_menu(user):
             dish_index = int(input("Введите номер блюда: ")) - 1
 
             if 0 <= dish_index < len(restaurant["menu"]):
-
                 deleted_dish = restaurant["menu"].pop(dish_index)
-
                 save_restaurant(restaurant)
-
                 print(f"Блюдо '{deleted_dish['name']}' удалено!")
 
             else:
@@ -724,75 +725,46 @@ def courier_menu(user):
 
 
         elif choice == "2":
-
             order_id = int(input("ID заказа: "))
-
             for order in orders:
-
                 # Проверка ID
-
                 if order["id"] == order_id:
-
                     # Проверка статуса
-
                     if order["status"] != "Готов к выдаче":
                         print("Заказ ещё не готов к выдаче")
-
                         break
 
                     # Назначение курьера
-
                     order["status"] = "В пути"
-
                     order["courier"] = user["username"]
-
                     save_data(ORDERS_FILE, orders)
-
                     print("Заказ успешно взят!")
-
                     break
 
 
             else:
-
                 print("Заказ не найден")
 
-
         elif choice == "3":
-
             order_id = int(input("ID заказа: "))
-
             for order in orders:
-
                 # Проверка заказа
-
                 if order["id"] == order_id:
-
                     # Проверка курьера
-
                     if order.get("courier") != user["username"]:
                         print("Этот заказ назначен другому курьеру")
-
                         break
-
                     # Проверка статуса
-
                     if order["status"] != "В пути":
                         print("Заказ ещё не доставляется")
-
                         break
 
                     order["status"] = "Доставлен"
-
                     save_data(ORDERS_FILE, orders)
-
                     print("Заказ успешно доставлен!")
-
                     break
 
-
             else:
-
                 print("Заказ не найден")
 
         elif choice == "4":
@@ -811,7 +783,6 @@ def show_courier_statistics(user):
 
     # Подсчёт статистики
     for order in orders:
-
         if (
             order.get("courier") ==
             user["username"]
@@ -822,7 +793,7 @@ def show_courier_statistics(user):
                 delivered_orders += 1
 
                 # Фиксированная оплата за доставку
-                total_earnings += 200
+                total_earnings += 450
 
     print("\n=== СТАТИСТИКА КУРЬЕРА ===")
 
