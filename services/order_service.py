@@ -20,6 +20,7 @@ def client_menu(user):
         print("9. Оформить заказ")
         print("10. Мои заказы")
         print("11. Отменить заказ")
+        print("12. Оценить ресторан")
         print("0. Назад")
 
         choice = input("Выбор: ")
@@ -101,6 +102,9 @@ def client_menu(user):
 
         elif choice == "11":
             cancel_order(user)
+
+        elif choice == "12":
+            rate_restaurant()
 
         elif choice == "0":
             break
