@@ -209,7 +209,7 @@ def show_restaurants():
                     sum(ratings) / len(ratings)
             )
             rating_text = (
-                f"⭐ {average_rating:.1f}"
+                f"{average_rating:.1f}"
             )
         else:
             rating_text = "Нет оценок"
@@ -767,8 +767,6 @@ def restaurant_menu(user):
 
         # ================= ИЗМЕНЕНИЕ СТАТУСА =================
 
-        # ================= ИЗМЕНЕНИЕ СТАТУСА =================
-
         elif choice == "6":
 
             order_id = int(input("ID заказа: "))
@@ -807,9 +805,9 @@ def restaurant_menu(user):
                         break
 
                     # Проверка отменённого заказа
-                    if order["status"] == "Отменён":
+                    if order["status"] in ["Отменён", "Доставлен"]:
                         print(
-                            "Нельзя изменить отменённый заказ"
+                            "Нельзя изменить завершённый заказ"
                         )
                         break
 

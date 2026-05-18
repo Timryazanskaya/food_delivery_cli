@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add restaurant rating option to client menu" />
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="display average restaurant ratings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/restaurants.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/restaurants.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/order_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,14 +69,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777907488154</updated>
-    </task>
-    <task id="LOCAL-00010" summary="remove duplicate imports from file service">
-      <option name="closed" value="true" />
-      <created>1779030836773</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1779030836773</updated>
     </task>
     <task id="LOCAL-00011" summary="remove duplicate imports from file service">
       <option name="closed" value="true" />
@@ -458,7 +454,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779127433160</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="display average restaurant ratings">
+      <option name="closed" value="true" />
+      <created>1779127610687</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1779127610687</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -488,7 +492,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add restaurant statistics calculation" />
     <MESSAGE value="add statistics option to restaurant interface" />
     <MESSAGE value="implement courier statistics system" />
     <MESSAGE value="add courier statistics interface" />
@@ -513,6 +516,7 @@
     <MESSAGE value="implement restaurant rating system" />
     <MESSAGE value="implement restaurant rating system" />
     <MESSAGE value="add restaurant rating option to client menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="add restaurant rating option to client menu" />
+    <MESSAGE value="display average restaurant ratings" />
+    <option name="LAST_COMMIT_MESSAGE" value="display average restaurant ratings" />
   </component>
 </project>
