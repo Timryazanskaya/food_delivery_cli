@@ -360,6 +360,42 @@ def show_client_orders(user):
 
         print(f"Сумма заказа: {order['total_price']} руб.")
 
+def show_restaurant_orders():
+
+    # Загрузка заказов
+    orders = load_data(ORDERS_FILE)
+
+    # Проверка наличия заказов
+    if not orders:
+        print("Заказов пока нет")
+        return
+
+    print("\n=== ЗАКАЗЫ РЕСТОРАНА ===")
+
+    # Вывод заказов
+    for order in orders:
+
+        print(f"\nID заказа: {order['id']}")
+        print(f"Клиент: {order['client']}")
+        print(f"Ресторан: {order['restaurant']}")
+        print(f"Статус: {order['status']}")
+
+        # Курьер
+        if "courier" in order:
+            print(f"Курьер: {order['courier']}")
+
+        print("Блюда:")
+
+        for item in order["items"]:
+
+            print(
+                f"- {item['name']} "
+                f"({item['category']}) "
+                f"- {item['price']} руб."
+            )
+
+        print(f"Сумма: {order['total_price']} руб.")
+
 def cancel_order(user):
 
     # Загрузка заказов
