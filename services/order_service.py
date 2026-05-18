@@ -618,3 +618,31 @@ def courier_menu(user):
 
         elif choice == "0":
             break
+
+def show_courier_statistics(user):
+
+    # Загрузка заказов
+    orders = load_data(ORDERS_FILE)
+
+    delivered_orders = 0
+    total_earnings = 0
+
+    # Подсчёт статистики
+    for order in orders:
+
+        if (
+            order.get("courier") ==
+            user["username"]
+        ):
+
+            if order["status"] == "Доставлен":
+
+                delivered_orders += 1
+
+                # Фиксированная оплата за доставку
+                total_earnings += 200
+
+    print("\n=== СТАТИСТИКА КУРЬЕРА ===")
+
+    print(f"Количество доставок: {delivered_orders}")
+    print(f"Заработано: {total_earnings} руб.")
