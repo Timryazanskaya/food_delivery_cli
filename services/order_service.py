@@ -740,13 +740,43 @@ def courier_menu(user):
 
                 print("Заказ не найден")
 
-        elif choice == "3":
-            order_id = int(input("ID заказа: "))
-            for o in orders:
-                if o["id"] == order_id:
-                    o["status"] = "Доставлен"
 
-            save_data(ORDERS_FILE, orders)
+        elif choice == "3":
+
+            order_id = int(input("ID заказа: "))
+
+            for order in orders:
+
+                # Проверка заказа
+
+                if order["id"] == order_id:
+
+                    # Проверка курьера
+
+                    if order.get("courier") != user["username"]:
+                        print("Этот заказ назначен другому курьеру")
+
+                        break
+
+                    # Проверка статуса
+
+                    if order["status"] != "В пути":
+                        print("Заказ ещё не доставляется")
+
+                        break
+
+                    order["status"] = "Доставлен"
+
+                    save_data(ORDERS_FILE, orders)
+
+                    print("Заказ успешно доставлен!")
+
+                    break
+
+
+            else:
+
+                print("Заказ не найден")
 
         elif choice == "4":
             show_courier_statistics(user)
