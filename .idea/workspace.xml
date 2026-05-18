@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="prevent creating orders with empty cart" />
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="add single item removal from cart">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/order_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,22 +68,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777907488154</updated>
-    </task>
-    <task id="LOCAL-00004" summary="prevent duplicate usernames during registration">
-      <option name="closed" value="true" />
-      <created>1777915964697</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1777915964697</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add auto-creation of data files if not exist">
-      <option name="closed" value="true" />
-      <created>1777916244168</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1777916244168</updated>
     </task>
     <task id="LOCAL-00006" summary="improve login success message">
       <option name="closed" value="true" />
@@ -458,7 +445,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779125943196</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="add cart clearing functionality">
+      <option name="closed" value="true" />
+      <created>1779126142056</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1779126142056</updated>
+    </task>
+    <task id="LOCAL-00054" summary="add single item removal from cart">
+      <option name="closed" value="true" />
+      <created>1779126228960</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1779126228960</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -488,8 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve restaurant menu display name" />
-    <MESSAGE value="use restaurant display names in cart workflow" />
     <MESSAGE value="add restaurant info" />
     <MESSAGE value="implement restaurant menu filtering by category" />
     <MESSAGE value="add dish filtering option to client interface" />
@@ -513,6 +514,8 @@
     <MESSAGE value="improve console spacing in filtered menu output. added a description of the restaurant's dishes" />
     <MESSAGE value="restrict restaurants to managing only their own orders" />
     <MESSAGE value="prevent creating orders with empty cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="prevent creating orders with empty cart" />
+    <MESSAGE value="add cart clearing functionality" />
+    <MESSAGE value="add single item removal from cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="add single item removal from cart" />
   </component>
 </project>

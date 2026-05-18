@@ -11,14 +11,15 @@ def client_menu(user):
     while True:
         print("1. Посмотреть рестораны")
         print("2. Посмотреть меню ресторана")
-        print("3. Фильтр блюд")
-        print("4. Добавить в корзину")
-        print("5. Посмотреть корзину")
-        print("6. Очистить корзину")
-        print("7. Удалить блюдо из корзины")
-        print("8. Оформить заказ")
-        print("9. Мои заказы")
-        print("10. Отменить заказ")
+        print("3. Поиск блюда")
+        print("4. Фильтр блюд")
+        print("5. Добавить в корзину")
+        print("6. Посмотреть корзину")
+        print("7. Очистить корзину")
+        print("8. Удалить блюдо из корзины")
+        print("9. Оформить заказ")
+        print("10. Мои заказы")
+        print("11. Отменить заказ")
         print("0. Назад")
 
         choice = input("Выбор: ")
@@ -30,19 +31,22 @@ def client_menu(user):
             show_restaurant_menu()
 
         elif choice == "3":
-            filter_restaurant_menu()
+            search_dishes()
 
         elif choice == "4":
-            add_to_cart(cart)
+            filter_restaurant_menu()
 
         elif choice == "5":
-            show_cart(cart)
+            add_to_cart(cart)
 
         elif choice == "6":
+            show_cart(cart)
+
+        elif choice == "7":
             cart.clear()
             print("Корзина очищена!")
 
-        elif choice == "7":
+        elif choice == "8":
             # Проверка корзины
             if not cart:
                 print("Корзина пуста")
@@ -67,7 +71,7 @@ def client_menu(user):
             else:
                 print("Неверный номер")
 
-        elif choice == "8":
+        elif choice == "9":
             # Проверка пустой корзины
             if not cart:
                 print("Корзина пуста")
@@ -92,10 +96,10 @@ def client_menu(user):
             print("Заказ оформлен!")
 
 
-        elif choice == "9":
+        elif choice == "10":
             show_client_orders(user)
 
-        elif choice == "10":
+        elif choice == "11":
             cancel_order(user)
 
         elif choice == "0":
@@ -272,6 +276,61 @@ def filter_restaurant_menu():
             f"{item['price']} руб."
         )
     print()
+
+def search_dishes():
+    # Загрузка ресторанов
+    restaurants = load_data(RESTAURANTS_FILE)
+
+    # Проверка ресторанов
+    if not restaurants:
+        print("Ресторанов пока нет")
+        return
+    # Поисковый запрос
+    query = input(
+        "Введите название блюда: "
+    ).lower()
+    found = []
+
+    # Поиск блюд
+    for restaurant in restaurants:
+        for item in restaurant["menu"]:
+            if query in item["name"].lower():
+                found.append({
+                    "restaurant":
+                    restaurant["restaurant_name"],
+                    "dish": item
+                })
+
+    # Проверка результатов
+    if not found:
+        print("Ничего не найдено")
+        return
+    print("\n=== РЕЗУЛЬТАТЫ ПОИСКА ===")
+    # Вывод результатов
+    for index, result in enumerate(found, start=1):
+
+        item = result["dish"]
+        print(
+            f"\n{index}. "
+            f"{item['name']}"
+        )
+        print(
+            f"Ресторан: "
+            f"{result['restaurant']}"
+        )
+        print(
+            f"Категория: "
+            f"{item['category']}"
+        )
+        print(
+            f"Описание: "
+            f"{item['description']}"
+        )
+        print(
+            f"Цена: "
+            f"{item['price']} руб."
+        )
+
 def add_to_cart(cart):
 
     # Загрузка ресторанов
