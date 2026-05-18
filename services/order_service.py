@@ -396,6 +396,42 @@ def show_restaurant_orders():
 
         print(f"Сумма: {order['total_price']} руб.")
 
+def show_available_orders():
+
+    # Загрузка заказов
+    orders = load_data(ORDERS_FILE)
+
+    # Получение доступных заказов
+    available_orders = [
+        order for order in orders
+        if order["status"] == "Готов к выдаче"
+    ]
+
+    # Проверка наличия заказов
+    if not available_orders:
+        print("Нет доступных заказов")
+        return
+
+    print("\n=== ДОСТУПНЫЕ ЗАКАЗЫ ===")
+
+    # Вывод заказов
+    for order in available_orders:
+
+        print(f"\nID заказа: {order['id']}")
+        print(f"Ресторан: {order['restaurant']}")
+        print(f"Клиент: {order['client']}")
+
+        print("Блюда:")
+
+        for item in order["items"]:
+
+            print(
+                f"- {item['name']} "
+                f"- {item['price']} руб."
+            )
+
+        print(f"Сумма: {order['total_price']} руб.")
+
 def cancel_order(user):
 
     # Загрузка заказов
