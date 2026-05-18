@@ -105,6 +105,48 @@ def client_menu(user):
         elif choice == "0":
             break
 
+def rate_restaurant():
+    orders = load_data(ORDERS_FILE)
+    restaurants = load_data(RESTAURANTS_FILE)
+    client_name = input("Ваш логин: ")
+    delivered_orders = [
+        order for order in orders
+        if (
+            order["client"] == client_name
+            and order["status"] == "Доставлен"
+        )
+    ]
+    # Проверка заказов
+    if not delivered_orders:
+        print("Нет доставленных заказов")
+        return
+    print("\n=== ДОСТАВЛЕННЫЕ ЗАКАЗЫ ===")
+    for order in delivered_orders:
+        print(
+            f"ID: {order['id']} | "
+            f"{order['restaurant']}"
+        )
+    order_id = int(input("ID заказа: "))
+    rating = int(input("Оценка от 1 до 5: "))
+    # Проверка оценки
+    if rating < 1 or rating > 5:
+        print("Неверная оценка")
+        return
+    for order in delivered_orders:
+        if order["id"] == order_id:
+            for restaurant in restaurants:
+                if (
+                    restaurant["restaurant_name"] ==
+                    order["restaurant"]
+                ):
+                    restaurant["ratings"].append(rating)
+                    save_data(
+                        RESTAURANTS_FILE,
+                        restaurants
+                    )
+                    print("Спасибо за оценку!")
+                    return
+    print("Заказ не найден")
 
 # ================= RESTAURANT =================
 RESTAURANTS_FILE = "data/restaurants.txt"
