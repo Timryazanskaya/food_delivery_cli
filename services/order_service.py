@@ -42,7 +42,32 @@ def client_menu(user):
             cart.clear()
             print("Корзина очищена!")
 
-        elif choice == "6":
+        elif choice == "7":
+            # Проверка корзины
+            if not cart:
+                print("Корзина пуста")
+                continue
+            print("\n=== КОРЗИНА ===")
+            # Вывод корзины
+            for index, item in enumerate(cart, start=1):
+                print(
+                    f"{index}. "
+                    f"{item['name']} | "
+                    f"{item['price']} руб."
+                )
+            # Выбор блюда
+            item_index = int(input("Номер блюда: ")) - 1
+            # Проверка выбора
+            if 0 <= item_index < len(cart):
+                removed_item = cart.pop(item_index)
+                print(
+                    f"{removed_item['name']} "
+                    f"удалено из корзины"
+                )
+            else:
+                print("Неверный номер")
+
+        elif choice == "8":
             # Проверка пустой корзины
             if not cart:
                 print("Корзина пуста")
@@ -67,10 +92,10 @@ def client_menu(user):
             print("Заказ оформлен!")
 
 
-        elif choice == "7":
+        elif choice == "9":
             show_client_orders(user)
 
-        elif choice == "8":
+        elif choice == "10":
             cancel_order(user)
 
         elif choice == "0":
