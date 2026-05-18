@@ -588,6 +588,7 @@ def courier_menu(user):
         print("1. Доступные заказы")
         print("2. Взять заказ")
         print("3. Завершить заказ")
+        print("4. Статистика")
         print("0. Назад")
 
         choice = input("Выбор: ")
@@ -615,6 +616,9 @@ def courier_menu(user):
                     o["status"] = "Доставлен"
 
             save_data(ORDERS_FILE, orders)
+
+        elif choice == "4":
+            show_courier_statistics(user)
 
         elif choice == "0":
             break
