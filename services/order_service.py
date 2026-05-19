@@ -656,6 +656,7 @@ def restaurant_menu(user):
     restaurant = get_restaurant(user["username"])
 
     while True:
+        orders = load_data(ORDERS_FILE)
         print("\n=== РЕСТОРАН ===")
         print("1. Посмотреть меню")
         print("2. Добавить блюдо")
