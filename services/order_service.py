@@ -9,6 +9,7 @@ def client_menu(user):
     cart = []
 
     while True:
+        print("\n=== КЛИЕНТ ===")
         print("1. Посмотреть рестораны")
         print("2. Посмотреть меню ресторана")
         print("3. Поиск блюда")
@@ -153,8 +154,10 @@ def rate_restaurant():
                         restaurants
                     )
                     print("Спасибо за оценку!")
+                    print()
                     return
     print("Заказ не найден")
+    print()
 
 # ================= RESTAURANT =================
 RESTAURANTS_FILE = "data/restaurants.txt"
@@ -222,6 +225,7 @@ def show_restaurants():
             f"{restaurant['restaurant_name']} | "
             f"{rating_text}"
         )
+    print()
 
 def show_restaurant_menu():
 
@@ -268,6 +272,7 @@ def show_restaurant_menu():
             f"{item['description']} | "
             f"{item['price']} руб."
         )
+    print()
 
 def filter_restaurant_menu():
 
@@ -277,6 +282,7 @@ def filter_restaurant_menu():
     # Проверка наличия ресторанов
     if not restaurants:
         print("Ресторанов пока нет")
+        print()
         return
 
     print("\n=== ВЫБЕРИТЕ РЕСТОРАН ===")
@@ -292,6 +298,7 @@ def filter_restaurant_menu():
     # Проверка выбора
     if restaurant_index < 0 or restaurant_index >= len(restaurants):
         print("Неверный номер ресторана")
+        print()
         return
 
     selected_restaurant = restaurants[restaurant_index]
@@ -299,6 +306,7 @@ def filter_restaurant_menu():
     # Проверка меню
     if not selected_restaurant["menu"]:
         print("Меню ресторана пустое")
+        print()
         return
 
     print("\n=== ДОСТУПНЫЕ КАТЕГОРИИ ===")
@@ -772,23 +780,16 @@ def restaurant_menu(user):
         # ================= ИЗМЕНЕНИЕ СТАТУСА =================
 
         elif choice == "6":
-
-            order_id = int(input("ID заказа: "))
-            print("\nДоступные статусы:")
-            print("1. Принят")
-            print("2. Готовится")
-            print("3. Готов к выдаче")
-            status_choice = input("Выбор: ")
-            statuses = {
-                "1": "Принят",
-                "2": "Готовится",
-                "3": "Готов к выдаче"
-            }
-            # Проверка выбора статуса
-            if status_choice not in statuses:
-                print("Неверный статус")
+            # Проверка ввода ID
+            try:
+                order_id = int(
+                    input("ID заказа: ")
+                )
+            except ValueError:
+                print("Введите число")
                 continue
-            new_status = statuses[status_choice]
+            found = False
+
             # Название текущего ресторана
             restaurant_name = (
                 get_restaurant(user["username"])
@@ -798,6 +799,7 @@ def restaurant_menu(user):
             for order in orders:
                 # Проверка ID
                 if order["id"] == order_id:
+                    found = True
                     # Проверка принадлежности заказа ресторану
                     if (
                             order.get("restaurant") !=
@@ -814,6 +816,22 @@ def restaurant_menu(user):
                             "Нельзя изменить завершённый заказ"
                         )
                         break
+
+                    print("\nДоступные статусы:")
+                    print("1. Принят")
+                    print("2. Готовится")
+                    print("3. Готов к выдаче")
+                    status_choice = input("Выбор: ")
+                    statuses = {
+                        "1": "Принят",
+                        "2": "Готовится",
+                        "3": "Готов к выдаче"
+                    }
+                    # Проверка выбора статуса
+                    if status_choice not in statuses:
+                        print("Неверный статус")
+                        continue
+                    new_status = statuses[status_choice]
 
                     # Изменение статуса
                     order["status"] = new_status

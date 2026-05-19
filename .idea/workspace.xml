@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="display average restaurant ratings">
+    <list default="true" id="34535c28-d83e-41c6-a569-538d58687a10" name="Changes" comment="new information added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/restaurants.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/restaurants.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/order_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,20 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.__init__.executor&quot;: &quot;Run&quot;,
-    &quot;Python.auth_service.executor&quot;: &quot;Run&quot;,
-    &quot;Python.file_service.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.order_service.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.__init__.executor": "Run",
+    "Python.auth_service.executor": "Run",
+    "Python.file_service.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.order_service.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -69,30 +70,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777907488154</updated>
-    </task>
-    <task id="LOCAL-00011" summary="remove duplicate imports from file service">
-      <option name="closed" value="true" />
-      <created>1779030903575</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1779030903575</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add code comments for readability and documentation">
-      <option name="closed" value="true" />
-      <created>1779031229937</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1779031229937</updated>
-    </task>
-    <task id="LOCAL-00013" summary="implement full restaurant menu management">
-      <option name="closed" value="true" />
-      <created>1779032278461</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1779032278461</updated>
     </task>
     <task id="LOCAL-00014" summary="add restaurant listing for clients">
       <option name="closed" value="true" />
@@ -462,7 +439,31 @@
       <option name="project" value="LOCAL" />
       <updated>1779127610687</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="prevent status updates for completed orders">
+      <option name="closed" value="true" />
+      <created>1779130108324</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1779130108324</updated>
+    </task>
+    <task id="LOCAL-00061" summary="handle missing restaurant ratings safely">
+      <option name="closed" value="true" />
+      <created>1779130222678</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1779130222678</updated>
+    </task>
+    <task id="LOCAL-00062" summary="new information added">
+      <option name="closed" value="true" />
+      <created>1779131859184</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1779131859184</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -492,9 +493,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add statistics option to restaurant interface" />
-    <MESSAGE value="implement courier statistics system" />
-    <MESSAGE value="add courier statistics interface" />
     <MESSAGE value="add dish descriptions to restaurant menu" />
     <MESSAGE value="improve restaurant menu display with descriptions" />
     <MESSAGE value="show dish descriptions in client menu" />
@@ -517,6 +515,9 @@
     <MESSAGE value="implement restaurant rating system" />
     <MESSAGE value="add restaurant rating option to client menu" />
     <MESSAGE value="display average restaurant ratings" />
-    <option name="LAST_COMMIT_MESSAGE" value="display average restaurant ratings" />
+    <MESSAGE value="prevent status updates for completed orders" />
+    <MESSAGE value="handle missing restaurant ratings safely" />
+    <MESSAGE value="new information added" />
+    <option name="LAST_COMMIT_MESSAGE" value="new information added" />
   </component>
 </project>

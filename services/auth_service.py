@@ -25,6 +25,7 @@ def register():
     save_data(USERS_FILE, users)
 
     print("Регистрация успешна!")
+    print()
 
 def login():
     users = load_data("data/users.txt")
@@ -39,7 +40,9 @@ def login():
                 return user
             else:
                 print("Неверный пароль")
+                print()
                 return None
 
     print("Пользователь не найден")
+    print()
     return None
